@@ -27,8 +27,8 @@ namespace Chat.Server.Services
         /// <returns></returns>
         public override Task ConnectToChat(ConnectMessage request, IServerStreamWriter<ChatMessage> responseStream, ServerCallContext context)
         {
-            Chat.OnAddMessageHandler += (message) => responseStream.WriteAsync(message);
-            return WaitForCancelation(context.CancellationToken);
+            Chat.OnAddMessageHandler += responseStream.WriteAsync;
+            return WaitForCancellation(context.CancellationToken);
         }
 
         /// <summary>
@@ -44,11 +44,11 @@ namespace Chat.Server.Services
         }
 
         /// <summary>
-        /// Await cancellationToken cancelation 
+        /// Await cancellationToken cancellation 
         /// </summary>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        private static Task WaitForCancelation(CancellationToken cancellationToken)
+        private static Task WaitForCancellation(CancellationToken cancellationToken)
         {
             var taskSource = new TaskCompletionSource();
             //add handler to cancellation of cancellationToken
