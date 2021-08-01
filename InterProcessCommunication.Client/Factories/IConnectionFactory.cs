@@ -1,6 +1,6 @@
 ﻿using Proto.Chat;
 
-namespace InterProcessCommunication.Client.Factories
+namespace Chat.Client.Factories
 {
     public interface IConnectionFactory
     {

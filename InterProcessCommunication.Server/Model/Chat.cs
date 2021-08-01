@@ -1,10 +1,8 @@
 ﻿using System;
-using Proto.Chat;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using Proto.Chat;
 
-namespace InterProcessCommunication.Server.Model
+namespace Chat.Server.Model
 {
     public class Chat
     {

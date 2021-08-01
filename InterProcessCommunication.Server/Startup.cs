@@ -1,12 +1,11 @@
-﻿using InterProcessCommunication.Server.Model;
-using InterProcessCommunication.Server.Services;
+﻿using Chat.Server.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace InterProcessCommunication.Server
+namespace Chat.Server
 {
     public class Startup
     {
@@ -15,7 +14,7 @@ namespace InterProcessCommunication.Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
-            services.AddSingleton<Chat>((provider) => new Chat() { Id = 1 });
+            services.AddSingleton<Model.Chat>((provider) => new Model.Chat() { Id = 1 });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

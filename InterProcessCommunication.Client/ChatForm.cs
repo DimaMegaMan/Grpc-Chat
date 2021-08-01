@@ -1,13 +1,11 @@
-﻿using InterProcessCommunication.Client.Factories;
-using System;
-using System.Windows.Forms;
-using Proto.Chat;
-using Grpc.Core;
-using Grpc.Net.Client;
+﻿using System;
 using System.Threading.Tasks;
-using Microsoft.VisualBasic;
+using System.Windows.Forms;
+using Chat.Client.Factories;
+using Grpc.Core;
+using Proto.Chat;
 
-namespace InterProcessCommunication.Client
+namespace Chat.Client
 {
     public partial class ChatForm : Form
     {

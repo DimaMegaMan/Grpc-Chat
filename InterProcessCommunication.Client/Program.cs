@@ -1,11 +1,8 @@
-using InterProcessCommunication.Client.Factories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Chat.Client.Factories;
 
-namespace InterProcessCommunication.Client
+namespace Chat.Client
 {
     static class Program
     {

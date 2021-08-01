@@ -1,24 +1,19 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
-using InterProcessCommunication.Server.Model;
-using Microsoft.Extensions.Logging;
-using Proto.Chat;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
+using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
+using Proto.Chat;
 
-namespace InterProcessCommunication.Server.Services
+namespace Chat.Server.Services
 {
     /// <summary>
     /// Service that implements publisher subscriber pattern 
     /// </summary>
     public class ChatService : Proto.Chat.ChatService.ChatServiceBase
     {
-        public Chat Chat { get; }
+        public Model.Chat Chat { get; }
 
-        public ChatService(Chat chat)
+        public ChatService(Model.Chat chat)
         {
             Chat = chat;
         }

@@ -1,5 +1,5 @@
 ﻿
-namespace InterProcessCommunication.Client
+namespace Chat.Client
 {
     partial class NameInput
     {
