@@ -1,0 +1,22 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+package Proto.Chat;
+
+// The greeting service definition.
+service ChatService {
+  // Sends a greeting
+  rpc ConnectToChat (ConnectMessage) returns (stream ChatMessage);
+  rpc SendMessage(ChatMessage) returns (google.protobuf.Empty);
+}
+
+// The request message containing the user's name.
+message ChatMessage {
+  string userName = 1;
+  string message = 2;
+}
+
+// The response message containing the greetings
+message ConnectMessage {
+  string userName = 1;
+}
